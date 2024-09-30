@@ -1,6 +1,6 @@
-# Your Name Here
+# Rylan Galloway
 # UWYO COSC 1010
-# Submission Date
+# Submission Date 9/30/24
 # Lab 03 
 # Lab Section: 
 # Sources, people worked with, help given to: 
@@ -98,8 +98,21 @@ min_temps = [
 # Write a single for loop to calculate both the average maximum temperature and the average minimum temperature.
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
+max_average_temperature = 0
+min_average_temperature = 0
+for temps in max_temps:
+    max_average_temperature = max_average_temperature + temps
+max_average_temperature = max_average_temperature/len(max_temps)
+print(max_average_temperature)
+for tempsMin in min_temps:
+    min_average_temperature = min_average_temperature + tempsMin
+min_average_temperature = min_average_temperature/len(min_temps)
+print(min_average_temperature)
+
 
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
-
-
+leastIndex = min_temps.index(min(min_temps))
+print(f"the lowest temperature was {min_temps[leastIndex]}")
+mostIndex = max_temps.index(max(max_temps))
+print(f"the highest temperature was {max_temps[mostIndex]}")
